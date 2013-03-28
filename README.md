@@ -1,5 +1,5 @@
-SITE NAME HERE
+Base Template
 ======
 
-Site Description:
-Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis.
+Utilizes Compass and HTML5, with IE fallback scripts. Documented thoroughly, but email hello@wadehammes.com if you have any questions. 
+If you have something you want to add, do it!
