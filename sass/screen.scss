@@ -63,6 +63,36 @@ a {
 // Structure & Grid
 /////////////////////////////////////////////////////////
 
+* {
+	@include box-sizing("border-box");
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust:none;
+
+	&:focus {
+		//outline: none; OPTIONAL
+	}
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+//- CLEARFIX FALLBACK - Use: <div class="clear"></div> after floated elements if clearfix class fails
+.clear {
+	clear: both;
+}
+
+//- Grid
 .grid {
 	width: 100%;
  	@extend .clearfix !optional;
@@ -71,12 +101,13 @@ a {
 [class*='col-'] {
   float: left;
   margin-right: $pad;
-  .grid &:last-of-type {
+  .grid, &:last-of-type {
     padding-right: 0 !important;
     margin-right: 0 !important;
   }
 }
 
+//- Columns in Grid - Please do the math and update below or add.
 .col-1-2 {
   width: 48%;
 }
@@ -108,7 +139,19 @@ body {
 }
 
 .container {
-	padding: 1em;
+	//padding: 1em;
+}
+
+nav {
+
+}
+
+section {
+
+}
+
+footer {
+
 }
 
 // Responsive - Must stay at bottom
