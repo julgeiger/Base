@@ -60,7 +60,7 @@ a {
 
 
 
-// Structure & Grid
+// Structure
 /////////////////////////////////////////////////////////
 
 * {
@@ -92,54 +92,18 @@ a {
 	clear: both;
 }
 
-//- Grid
-.grid {
-	width: 100%;
- 	@extend .clearfix !optional;
-}
-
-[class*='col-'] {
-  float: left;
-  margin-right: $pad;
-  .grid, &:last-of-type {
-    padding-right: 0 !important;
-    margin-right: 0 !important;
-  }
-}
-
-//- Columns in Grid - Please do the math and update below or add.
-.col-1-2 {
-  width: 48%;
-}
-
-.col-1-4 {
-	width: 23%;
-}
-
-.col-3-4 {
-	width: 73%;
-}
-
-.col-1-8 {
-	width: 10.5%;
-}
-
-.col-7-8 {
-	width: 88.5%;
-}
-
-
+@import "../sass/grid";
 
 // Main
 ////////////////////////////////////////////////////////
 
 body {
 	//font-family: Arial; // REPLACE WTIH FONT STACK
-	background-color: #e6e6ea;
+	//background-color: $grey;
 }
 
 .container {
-	//padding: 1em;
+
 }
 
 nav {
