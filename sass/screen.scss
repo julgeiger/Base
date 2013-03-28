@@ -1,0 +1,116 @@
+/* BASE TEMPLATE
+* Copyright 2013 */
+
+// Imports - Must stay at top
+//////////////////////////////////////////////////////////
+
+$legacy-support-for-ie: true;
+@import "compass/reset";
+@import "compass";
+@import "compass/css3";
+@import "../sass/base";
+
+//- FOR DOCUMENTATION ON MIXINS & THEIR USE, PLEASE VISIT:
+//- http://compass-style.org/reference/compass/
+
+
+
+
+// Typography Presets
+//////////////////////////////////////////////////////////
+
+h1 {
+	color: $black;
+	//font-family: Arial; // REPLACE WTIH FONT STACK
+	@include adjust-font-size-to(68px);
+}
+
+h2 {
+	color: $black;
+	@include adjust-font-size-to(40px);
+	margin-bottom: 5px;
+}
+
+h3 {
+	color: $black;
+	@include adjust-font-size-to(36px);
+	margin-bottom: 5px;
+}
+
+h5 {
+	color: $black;
+	//font-family: Arial; // REPLACE WTIH FONT STACK
+}
+
+h6 {
+	color: $grey;
+	@include adjust-font-size-to(12px);
+	text-transform: uppercase;
+}
+
+p {
+	color: $grey;
+	@include adjust-font-size-to(18px);
+}
+
+
+a {
+	@include link-colors($grey, $black, $black);
+}
+
+
+
+// Structure & Grid
+/////////////////////////////////////////////////////////
+
+.grid {
+	width: 100%;
+ 	@extend .clearfix !optional;
+}
+
+[class*='col-'] {
+  float: left;
+  margin-right: $pad;
+  .grid &:last-of-type {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+.col-1-2 {
+  width: 48%;
+}
+
+.col-1-4 {
+	width: 23%;
+}
+
+.col-3-4 {
+	width: 73%;
+}
+
+.col-1-8 {
+	width: 10.5%;
+}
+
+.col-7-8 {
+	width: 88.5%;
+}
+
+
+
+// Main
+////////////////////////////////////////////////////////
+
+body {
+	//font-family: Arial; // REPLACE WTIH FONT STACK
+	background-color: #e6e6ea;
+}
+
+.container {
+	padding: 1em;
+}
+
+// Responsive - Must stay at bottom
+////////////////////////////////////////////////////////
+@import "../sass/responsive";
